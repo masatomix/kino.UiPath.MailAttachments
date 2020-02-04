@@ -54,5 +54,6 @@ https://github.com/masatomix/kino.UiPath.MailAttachments
 
 ## 改訂履歴
 
+- 0.1.1 注釈をつけるなど。リファクタリング。
 - 0.1.0 Base64Decodeしたり、Byte列をファイル出力したり、それらをテストするコードを追加。
 - 0.0.9 初版

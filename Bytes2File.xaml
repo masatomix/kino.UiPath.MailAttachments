@@ -65,7 +65,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="System.IO.Stream fs = new System.IO.FileStream(&#xD;&#xA;   fullPath,&#xD;&#xA;    System.IO.FileMode.Create,&#xD;&#xA;    System.IO.FileAccess.Write);&#xD;&#xA;fs.Write(bs, 0, bs.Length);&#xD;&#xA;fs.Close();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="System.IO.Stream fs = null;&#xD;&#xA;try {&#xD;&#xA;  fs = new System.IO.FileStream(&#xD;&#xA;    fullPath,&#xD;&#xA;    System.IO.FileMode.Create,&#xD;&#xA;    System.IO.FileAccess.Write);&#xD;&#xA;  fs.Write(bs, 0, bs.Length);&#xD;&#xA;} finally {&#xD;&#xA;  fs.Close();&#xD;&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="fullPath">[fullPath]</InArgument>
         <InArgument x:TypeArguments="s:Byte[]" x:Key="bs">[bytes]</InArgument>
