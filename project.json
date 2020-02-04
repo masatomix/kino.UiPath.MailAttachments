@@ -3,15 +3,12 @@
   "description": "添付ファイルを操作するアクティビティ",
   "main": "Mail2Attachments.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "2.7.2",
-    "UiPath.Mail.Activities": "1.7.2",
-    "UiPath.System.Activities": "19.10.1",
-    "UiPath.UIAutomation.Activities": "19.11.0"
+    "UiPath.System.Activities": "19.10.1"
   },
   "webServices": [],
   "schemaVersion": "4.0",
   "studioVersion": "19.10.2.0",
-  "projectVersion": "0.1.0",
+  "projectVersion": "0.1.1",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
