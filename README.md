@@ -2,12 +2,20 @@
 
 メールを受信するアクティビティから取得できる ``System.Net.Mail.MailMessage`` から、添付ファイルを取り出すアクティビティ(Mail2Attachments)です。
 
+
+![01.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/73777/311813b7-f343-926c-ef18-e7ad66ee1486.png)
+
 取り出した添付ファイルデータは、Base64でEncodeされた文字列にしてあるので、たとえばそのままUiPath Orchestrator(以下OC)のキューに投入したりすることが可能です。
 
 UiPath標準のアクティビティ「添付ファイルを保存」だと、添付ファイルをファイルに保存する機能しかなかったので(ですよね？？)、ファイルを書き出すことなくOCのキューに投入したいとおもい、作成しました。
 
 また、Base64Encodeされた文字列をバイト列(Byte[])へ戻すアクティビティ(Base64Decode)や、そのバイト列をファイルに書き出すアクティビティ(Bytes2File)なども作成しました。なので取り出したBase64Encode文字列をBase64Decodeアクティビティにかけて、さらにBytes2Fileアクティビティに渡してあげれば、標準の「添付ファイルを保存」アクティビティと同じ機能になります。
 
+## インストール
+
+https://www.nuget.org/packages/kino.UiPath.MailAttachments/ で登録してあるので、UiPath Studioの「パッケージを管理 >> すべてのパッケージ」を選択し``kino.uipath``で検索してみると一覧されると思います。そのままインストールしてください。
+
+UiPath Studio 2019.10.12 で動作確認しています。
 
 ## 画面イメージ
 
